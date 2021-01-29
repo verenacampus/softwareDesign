@@ -9,6 +9,7 @@ public class MitarbeiterManager {
     private Provision provision;
 
     public MitarbeiterManager(Provision provision) {
+
         this.provision = provision;
     }
 
@@ -17,6 +18,7 @@ public class MitarbeiterManager {
     }
 
     public void setProvision(Provision provision) {
+
         this.provision = provision;
     }
 
