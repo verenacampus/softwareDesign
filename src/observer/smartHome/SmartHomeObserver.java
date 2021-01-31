@@ -1,6 +1,6 @@
-package at.campus02.iwi.bsp1;
+package observer.smartHome;
 
 public interface SmartHomeObserver {
     public void update(); // DO NOT CHANGE
-}
 
+}

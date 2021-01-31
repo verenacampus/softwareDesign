@@ -1,21 +1,23 @@
-package at.campus02.iwi.bsp1;
+package observer.smartHome;
 
+import at.campus02.iwi.bsp1.SmartHomeObserver;
+import at.campus02.iwi.bsp1.SmartHomeSubject;
 
 import java.util.ArrayList;
 
-public class DataStore implements SmartHomeSubject{
+public class DataStore implements SmartHomeSubject {
     private double humidity;
     private boolean allWindowsClosed;
     private boolean allDoorsClosed;
 
-    private ArrayList<SmartHomeObserver> observerArrayList;
+    private ArrayList<at.campus02.iwi.bsp1.SmartHomeObserver> observerArrayList;
 
 
     public DataStore() {
         this.humidity = 50;
         this.allWindowsClosed = false;
         this.allDoorsClosed = false;
-        observerArrayList = new ArrayList<SmartHomeObserver>();
+        observerArrayList = new ArrayList<at.campus02.iwi.bsp1.SmartHomeObserver>();
     }
 
     public void setAllDoorsClosed(boolean allDoorsClosed) {
@@ -45,12 +47,12 @@ public class DataStore implements SmartHomeSubject{
     }
 
     @Override
-    public void registerObserver(SmartHomeObserver smartHomeObserver) {
+    public void registerObserver(at.campus02.iwi.bsp1.SmartHomeObserver smartHomeObserver) {
         observerArrayList.add(smartHomeObserver);
     }
 
     @Override
-    public void removeObserver(SmartHomeObserver smartHomeObserver) {
+    public void removeObserver(at.campus02.iwi.bsp1.SmartHomeObserver smartHomeObserver) {
         observerArrayList.remove(smartHomeObserver);
     }
 
@@ -61,4 +63,3 @@ public class DataStore implements SmartHomeSubject{
         }
     }
 }
-

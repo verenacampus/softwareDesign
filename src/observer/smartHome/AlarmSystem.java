@@ -1,8 +1,11 @@
-package at.campus02.iwi.bsp1;
+package observer.smartHome;
+
+import at.campus02.iwi.bsp1.DataStore;
+import at.campus02.iwi.bsp1.SmartHomeObserver;
 
 public class AlarmSystem implements SmartHomeObserver {
     private boolean canBeActivated;
-    private DataStore data;
+    private at.campus02.iwi.bsp1.DataStore data;
 
 
 

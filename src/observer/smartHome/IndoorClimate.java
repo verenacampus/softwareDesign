@@ -1,8 +1,11 @@
-package at.campus02.iwi.bsp1;
+package observer.smartHome;
+
+import at.campus02.iwi.bsp1.DataStore;
+import at.campus02.iwi.bsp1.SmartHomeObserver;
 
 public class IndoorClimate implements SmartHomeObserver {
     private boolean shouldOpenWindows;
-    private DataStore data;
+    private at.campus02.iwi.bsp1.DataStore data;
 
 
     public IndoorClimate(DataStore data) {
@@ -27,4 +30,3 @@ public class IndoorClimate implements SmartHomeObserver {
         }
     }
 }
-
